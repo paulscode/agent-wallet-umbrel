@@ -26,7 +26,8 @@ description: >-
 
   Anyone holding the dashboard password or an issued API key can spend from the
   connected LND node, up to its limits. Treat the dashboard password and API keys
-  like cash. Sign in with your Umbrel app password (shown on this app's page).
+  like cash. To get your dashboard login, right-click the Agent Wallet tile on
+  your Umbrel home screen and choose "Show default credentials".
 
 
   🛠️ REQUIREMENTS
