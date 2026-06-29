@@ -23,7 +23,7 @@
 
 set -euo pipefail
 
-VERSION="0.1.2.0"
+VERSION="0.1.3.0"
 IMAGE="paulscode/agent-wallet-umbrel:${VERSION}"
 PLATFORMS="linux/amd64,linux/arm64"
 
