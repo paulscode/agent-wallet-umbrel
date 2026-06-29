@@ -30,8 +30,9 @@ in a single container — the same image contract as the StartOS package.
 - **Electrs** — required (the on-chain indexer). **Fulcrum** also works: it
   re-exports the same connection variables, so either indexer satisfies the app.
 - **Mempool** — optional. If the official **Mempool** app or the **Mempool
-  BIP-110** app is installed, Agent Wallet uses it for fee estimates; otherwise
-  it falls back to the public mempool.space API and your indexer.
+  BIP-110** app is installed, Agent Wallet uses it for fee estimates **and** for
+  the dashboard's explorer links (your LAN Mempool at `http://<device>.local`);
+  otherwise it falls back to the public mempool.space API and explorer.
 
 ## How to add this store to your Umbrel
 
