@@ -50,8 +50,10 @@ in a single container — the same image contract as the StartOS package.
 
 ## Using it
 
-- Open Agent Wallet from your Umbrel home screen. Sign in with your Umbrel app
-  password (shown on the app's page).
+- Get your dashboard password: right-click the Agent Wallet tile and choose
+  **Show default credentials** (or it's offered the first time you open the app).
+  That value is your login.
+- Open Agent Wallet from your Umbrel home screen and sign in with it.
 - The wallet drives **your** LND node — back up your Umbrel and your LND seed.
 
 ### Advanced configuration

@@ -64,7 +64,13 @@ icon: https://raw.githubusercontent.com/paulscode/agent-wallet-umbrel/master/age
 gallery: []
 path: ""
 defaultUsername: ""
+# The dashboard login token is the Umbrel app password ($APP_PASSWORD, wired to
+# DASHBOARD_TOKEN in the entrypoint). deterministicPassword:true makes Umbrel
+# surface that exact value under the app's "Show default credentials" right-click
+# menu so the user can copy it to sign in. (The login is token-only — no
+# username — so defaultUsername stays empty.)
 defaultPassword: ""
+deterministicPassword: true
 releaseNotes: >-
   First Umbrel release, tracking Agent Wallet v0.1.2. Self-custodial Bitcoin &
   Lightning wallet with an agent automation API, connecting to your Umbrel LND
