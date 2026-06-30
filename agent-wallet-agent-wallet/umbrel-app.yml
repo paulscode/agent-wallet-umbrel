@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.0.0"
+version: "0.4.1.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,13 +73,14 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.0. Channel setup is now more resilient: a
-  receive/balanced plan opens several smaller channels across different
-  providers instead of one big channel, picks providers with a per-wallet
-  weighted-random spread, and the "Fast" receive option now correctly seeds
-  inbound liquidity. You can also Cancel a running channel plan at any time —
-  anything already in flight finishes on its own, and you can start fresh
-  immediately — and a plan that gets stuck on a slow or force-closed channel now
-  resolves itself instead of blocking new plans.
+  Tracks upstream Agent Wallet v0.4.1 — a fix-up release. Several dashboard forms
+  (the channel-mix planner, send-payment source picker, rebalance picker, BOLT 12
+  issue/pay, API-key creation, and the audit-log filter) had inputs that silently
+  failed to update under the dashboard's content-security policy; they all work
+  now. Onboarding also carries your earlier choices forward: after your deposit
+  confirms, the "build inbound efficiently" step pre-fills the receive amount you
+  chose instead of asking again. The Fund Wallet dialog gains a copy-amount (in
+  sats) button, only shows the suggested-deposit hint once a QR exists, and closes
+  itself once your deposit is detected.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
