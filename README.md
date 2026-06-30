@@ -87,6 +87,6 @@ MIT — see [LICENSE](LICENSE).
   [agent-wallet-startos](https://github.com/paulscode/agent-wallet-startos)
   repository (`Dockerfile.umbrel`) and published multi-arch (linux/amd64 +
   linux/arm64). See [`build-umbrel-images.sh`](build-umbrel-images.sh). It pins
-  the same app + gateway base images as the 0.1.2.0 StartOS release.
+  the same app + gateway base images as the 0.2.0.0 StartOS release.
 - **Architecture:** the arm64 build has not been hardware-tested by the author;
   please report issues if you hit any.

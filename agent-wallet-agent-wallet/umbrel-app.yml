@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.1.3.0"
+version: "0.2.0.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,9 +73,13 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.1.3. Fixes the dashboard's Copy buttons
-  (including "Copy Address" when funding the wallet) over plain HTTP on the LAN —
-  they previously failed because the browser's Clipboard API is only available
-  in a secure context. Copying now falls back to a method that works over HTTP.
+  Tracks upstream Agent Wallet v0.2.0. Adds a capital-efficient "Build inbound
+  efficiently" channel-mix strategy: starting from a small on-chain deposit, the
+  wallet opens a channel, swaps its balance back on-chain (leaving the channel
+  able to receive), and reuses the funds to open the next one — repeating to
+  build several times your deposit in inbound (receive) liquidity. It runs in the
+  background with a live per-round view, an honest up-front estimate of time and
+  fees, and a "Stop after this round" control, and is offered to new users from
+  the funding wizard.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
