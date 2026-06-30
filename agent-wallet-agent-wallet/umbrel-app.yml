@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.1.1"
+version: "0.4.1.2"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,13 +73,14 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.1.1 — a small follow-up to v0.4.1. Fixes the
-  per-channel status labels on the channel-mix progress screens, which failed to
-  render under the dashboard's content-security policy, and rewords the
-  onboarding "skip" link to "Prefer to set things up yourself?" for clarity.
-  Carries forward all of v0.4.1: content-security-policy fixes across the
-  dashboard forms (planner, send-payment source picker, rebalance, BOLT 12
-  issue/pay, API keys, audit filter), onboarding that remembers your earlier
-  receive target, and the Fund Wallet copy-amount button / auto-close on deposit.
+  Tracks upstream Agent Wallet v0.4.1.2 — a small follow-up to v0.4.1.1. Removes
+  the bootstrap planner's "final push round" checkbox: it never actually did
+  anything (its trigger condition couldn't be met) and described a confusing
+  trade-off, so it's gone; the loop simply leaves any un-swappable leftover on
+  your spendable on-chain balance. Carries forward all of v0.4.1.x: the
+  content-security-policy fixes across the dashboard forms and channel-mix
+  progress labels, onboarding that remembers your earlier receive target, the
+  Fund Wallet copy-amount button / auto-close on deposit, and the clearer
+  onboarding "skip" link.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
