@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.11.0"
+version: "0.4.12.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,12 +73,12 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.11. Fixes an Add-Receive-Capacity / inbound
-  swap that could hang at "Sending over Lightning" if it was interrupted at the
-  pay step (for example by updating the app mid-swap). The Lightning payment is
-  now retried safely on recovery — with a guard that never double-pays — so a
-  stranded swap completes on its own instead of stalling. Carries forward v0.4.10
-  (channel-build progress survives a page refresh) and v0.4.9 (waits for a peer
-  to connect before opening a channel), plus all earlier 0.4.x work.
+  Tracks upstream Agent Wallet v0.4.12. Adds "view in mempool" link icons to the
+  automated channel-setup progress views: wherever a step is waiting for an
+  on-chain transaction to confirm (Efficient/bootstrap rounds and multi-channel
+  opens), you can now open that transaction in your configured mempool explorer.
+  Carries forward v0.4.11 (interrupted inbound swaps recover safely), v0.4.10
+  (progress view survives a page refresh), and v0.4.9 (waits for a peer to
+  connect before opening a channel), plus all earlier 0.4.x work.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
