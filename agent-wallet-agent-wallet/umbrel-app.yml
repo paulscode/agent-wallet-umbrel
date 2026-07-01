@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.16.0"
+version: "0.4.17.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,12 +73,11 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.16. Adds a dashboard banner when an inbound
-  build stops early: previously a failed build left you on the dashboard with no
-  explanation after a refresh. Now you get a "last build stopped" banner with
-  Retry (re-opens the planner pre-filled so you review a fresh plan and confirm)
-  and Dismiss (remembered so it won't nag). Carries forward v0.4.15
-  (anchor-reserve sizing so multi-round builds don't fail), v0.4.14 (mempool
-  links), and all earlier 0.4.x work.
+  Tracks upstream Agent Wallet v0.4.17. Fixes Retry on a failed inbound build:
+  restarting the same plan previously just re-showed the old, already-failed run
+  instead of starting a new one. Re-running an identical plan now correctly
+  launches a fresh build once the previous one has ended. Carries forward v0.4.16
+  (failed-build banner with Retry / Dismiss), v0.4.15 (anchor-reserve sizing),
+  v0.4.14 (mempool links), and all earlier 0.4.x work.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
