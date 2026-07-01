@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.15.0"
+version: "0.4.16.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,13 +73,12 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.15. Fixes Efficient/bootstrap builds failing
-  from the second channel on with "reserved wallet balance invalidated". Your
-  node keeps a small on-chain reserve per open channel (to fee-bump force-closes)
-  that grows as the builder opens more channels; the builder now sizes each
-  channel to leave that reserve, and an in-progress round that hits the limit
-  self-heals by shrinking and retrying instead of failing. Carries forward
-  v0.4.14 (mempool links for every on-chain step), v0.4.13 (pinned-payment fix),
-  and all earlier 0.4.x work.
+  Tracks upstream Agent Wallet v0.4.16. Adds a dashboard banner when an inbound
+  build stops early: previously a failed build left you on the dashboard with no
+  explanation after a refresh. Now you get a "last build stopped" banner with
+  Retry (re-opens the planner pre-filled so you review a fresh plan and confirm)
+  and Dismiss (remembered so it won't nag). Carries forward v0.4.15
+  (anchor-reserve sizing so multi-round builds don't fail), v0.4.14 (mempool
+  links), and all earlier 0.4.x work.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
