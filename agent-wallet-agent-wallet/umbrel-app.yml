@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.8.0"
+version: "0.4.9.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,14 +73,14 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.8. Fixes automated channel building (Receive
-  → Efficient) that could stall at 0 rounds: the background executor shares one
-  LND connection across its per-tick worker loops, and a connection left bound to
-  a finished loop raised "Event loop is closed" on every later tick, wedging the
-  run. The connection is now rebuilt per worker loop. Also, a peer that isn't
-  registered as connected the instant after a successful connect (a brief LND
-  race) is now retried on the same peer for a few ticks instead of immediately
-  cycling through the whole peer list. Carries forward v0.4.7 (onboarding carries
-  your chosen plan into the connect step) and all earlier 0.4.x work.
+  Tracks upstream Agent Wallet v0.4.9. Fixes automated channel building (Receive
+  → Efficient, and manual multi-channel) that stalled with "peer … is not online"
+  even for reachable peers. Connecting to a peer is asynchronous — the node
+  reports "connection initiated" a moment before the peer is actually online — so
+  the builder was opening the channel a hair too early and getting rejected. It
+  now waits for the peer to come online before opening. Also rebuilds the shared
+  Lightning connection per background worker cycle (fixes an "Event loop is
+  closed" error that could wedge a run). Carries forward v0.4.7 (onboarding
+  carries your chosen plan into the connect step) and all earlier 0.4.x work.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
