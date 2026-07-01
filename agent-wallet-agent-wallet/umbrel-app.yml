@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.6.0"
+version: "0.4.7.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,12 +73,12 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.6. Makes the new-user welcome wizard reliably
-  reappear on a fresh node or a fresh install: the "skip onboarding" choice is now
-  remembered on the server (tied to your Lightning node) instead of in the
-  browser, so reinstalling Agent Wallet or LND — or opening the dashboard from a
-  different browser — shows onboarding again, while a deliberate skip still sticks
-  for your current node. Carries forward all of v0.4.5 (the Braiins Deposit
-  step-by-step wizard, the connect-screen accordion) and earlier 0.4.x fixes.
+  Tracks upstream Agent Wallet v0.4.7. Fixes onboarding to carry your chosen plan
+  into the connect step: after depositing, the screen now leads with what you
+  picked in the welcome wizard (e.g. Receive → Efficient shows "build inbound
+  efficiently") instead of dropping you on the manual single-channel form, with
+  the manual option kept as a collapsed secondary choice. Carries forward v0.4.6
+  (onboarding reliably reappears on a fresh node/install) and all earlier 0.4.x
+  work.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel

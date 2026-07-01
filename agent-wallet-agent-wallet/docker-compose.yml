@@ -11,7 +11,7 @@ services:
   # entrypoint (docker_entrypoint_umbrel.sh, baked into the image) wires the
   # environment below to the app's runtime config.
   web:
-    image: paulscode/agent-wallet-umbrel:0.4.6.0@sha256:e1bcce203a6f8c9cb189c9bba80ad1ccaf7dcdc7c918b4b56a39ee4fb0664368
+    image: paulscode/agent-wallet-umbrel:0.4.7.0@sha256:ad3c0e0d05d6ab4dea81ce4f871eab65b1bc9ac6173ab76800828fa9cff08c71
     restart: on-failure
     stop_grace_period: 5m
     volumes:
