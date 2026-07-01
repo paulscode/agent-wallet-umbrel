@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: agent-wallet-agent-wallet
 category: bitcoin
 name: Agent Wallet
-version: "0.4.4.0"
+version: "0.4.5.0"
 tagline: A self-custodial Bitcoin & Lightning wallet with an automation API
 description: >-
   Agent Wallet is a self-custodial Bitcoin and Lightning wallet that connects to
@@ -73,13 +73,12 @@ defaultUsername: ""
 defaultPassword: ""
 deterministicPassword: true
 releaseNotes: >-
-  Tracks upstream Agent Wallet v0.4.4. Fixes on-chain "Send max" so it truly
-  empties the wallet: it now sweeps the whole balance to the destination with no
-  change output, instead of leaving a small remainder behind when the actual fee
-  came in under the estimate. Carries forward the recent fixes: removal of the
-  inert bootstrap "final push" option (v0.4.3), the content-security-policy fixes
-  across the dashboard forms and channel-mix progress labels (v0.4.1–v0.4.2),
-  onboarding that remembers your earlier receive target, and the Fund Wallet
-  copy-amount button / auto-close on deposit.
+  Tracks upstream Agent Wallet v0.4.5. The Braiins Deposit screen is now a
+  step-by-step wizard (source → amount & address → review) instead of one long
+  form, so it's easier to follow. After a deposit confirms, the connect screen
+  leads with your chosen setup and tucks the manual single-channel option behind
+  a collapsible section. And onboarding now shows again on a fresh node — if you
+  reinstall LND or Agent Wallet, the welcome wizard reappears instead of jumping
+  straight to the dashboard. Carries forward all earlier 0.4.x fixes.
 submitter: Paul Lamb
 submission: https://github.com/paulscode/agent-wallet-umbrel
